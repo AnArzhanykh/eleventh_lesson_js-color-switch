@@ -21,10 +21,6 @@ function startChanged(){
 
     timer = setInterval(() => {
 
-        const randomIntegerFromInterval = (min, max) => {
-            return Math.floor(Math.random() * (max - min + 1) + min);
-        };
-
         const index = randomIntegerFromInterval(0, colors.length);
 
         document.body.style.backgroundColor = colors[index];
@@ -35,5 +31,10 @@ function stopChanged(){
     btnStartRef.disabled = false;
     clearInterval(timer);
 }
+
+
+const randomIntegerFromInterval = (min, max) => {
+    return Math.floor(Math.random() * (max - min + 1) + min);
+};
 
 
